@@ -1,0 +1,121 @@
+name: Integration Workflow Checks
+
+on:
+
+  push:
+
+jobs:
+
+  linting:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code to prepare for linting tasks
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter for checking on remote server
+        uses: subosito/flutter-action@v2
+
+        with:
+
+          flutter-version: 3.13.9
+          cache: true
+
+      - name: Install dependencies required for performing GitHub checks on remote server
+        run: flutter pub get
+
+      # - name: Create a duplicate of the .env file
+      #   run: |
+      #     touch .env
+      #     echo ENV_VARIABLE0=${{ secrets.ENC_VARIABLE0 }} >> .env
+      #     echo ENV_VARIABLE1=${{ secrets.ENV_VARIABLE1 }} >> .env
+      #     cat .env
+
+      - name: Run lint checks for all Flutter files
+        run: flutter analyze --no-pub
+
+  testing:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout codebase to prepare for automated testing
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter for checking on remote server
+        uses: subosito/flutter-action@v2
+
+        with:
+
+          flutter-version: 3.13.9
+          cache: true
+
+      - name: Run all flutter tests in the corresponding folder
+        run: flutter test
+
+  building_android_bundle:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code to prepare for build jobs on remote server
+        uses: actions/checkout@v3
+
+      - name: Set up Java on host system
+        uses: actions/setup-java@v3
+
+        with:
+
+          distribution: "zulu"
+          java-version: 18
+          cache: "gradle"
+
+      - name: Set up Flutter for checking on remote server
+        uses: subosito/flutter-action@v2
+
+        with:
+
+          flutter-version: 3.13.9
+          cache: true
+
+      - name: Install dependencies required for performing GitHub checks on remote server
+        run: flutter pub get
+
+      - name: Build the project for Android devices
+        run: flutter build appbundle
+
+  building_ios_app:
+
+    runs-on: macos-latest
+
+    steps:
+
+      - name: Checkout code to prepare for ios build job on remote server
+        uses: actions/checkout@v3
+
+      - name: Set up Java on host system
+        uses: actions/setup-java@v3
+
+        with:
+
+          distribution: "zulu"
+          java-version: 18
+          cache: "gradle"
+
+      - name: Set up Flutter for checking on remote server
+        uses: subosito/flutter-action@v2
+
+        with:
+
+          flutter-version: 3.13.9
+          cache: true
+
+      - name: Install dependencies required for performing GitHub checks on remote server
+        run: flutter pub get
+
+      - name: Build the project for Android devices
+        run: flutter build ios --no-codesign
