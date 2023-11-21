@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:neutrino/utility/constants.dart";
 
 
 class InfoCard extends StatelessWidget {
@@ -8,7 +9,10 @@ class InfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Container();
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return Container(height: 160, width: screenWidth*0.48,
+                     decoration: BoxDecoration(color: ocean, borderRadius: BorderRadius.all(Radius.circular(10))));
 
   }
 
