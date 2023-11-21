@@ -88,23 +88,82 @@ flutter:
   #         weight: 700
   #
 
-    - family: Poppins
+    # - family: Poppins
+
+    #   fonts:
+
+    #     - asset: assets/fonts/Poppins-Regular.ttf
+
+    #     - asset: assets/fonts/Poppins-Black.ttf
+    #       weight: 900
+
+    #     - asset: assets/fonts/Poppins-Bold.ttf
+    #       weight: 700
+
+    #     - asset: assets/fonts/Poppins-Semi-Bold.ttf
+    #       weight: 600
+
+    #     - asset: assets/fonts/Poppins-Medium.ttf
+    #       weight: 500
+
+    - family: Futura
 
       fonts:
 
-        - asset: assets/fonts/Poppins-Regular.ttf
+        # - asset: assets/fonts/Futura-Book.ttf
 
-        - asset: assets/fonts/Poppins-Black.ttf
-          weight: 900
+        # - asset: assets/fonts/Futura-Extra-Black.ttf
+        #   weight: 900
 
-        - asset: assets/fonts/Poppins-Bold.ttf
+        # - asset: assets/fonts/Futura-Bold.ttf
+        #   weight: 700
+
+        # - asset: assets/fonts/Futura-Heavy.ttf
+        #   weight: 600
+
+        # - asset: assets/fonts/Futura-Medium.ttf
+        #   weight: 500
+
+        - asset: assets/fonts/Futura-Book.otf
+
+        - asset: assets/fonts/Futura-Bold.otf
           weight: 700
 
-        - asset: assets/fonts/Poppins-Semi-Bold.ttf
+        - asset: assets/fonts/Futura-Extra-Bold.otf
+          weight: 900
+
+        - asset: assets/fonts/Futura-Heavy.otf
           weight: 600
 
-        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Futura-Medium.otf
           weight: 500
+
+        - asset: assets/fonts/Futura-Light.otf
+          weight: 300
+  
+    - family: Okta-Neue
+
+      fonts:
+
+        - asset: assets/fonts/Okta-Neue-Regular.ttf
+
+        - asset: assets/fonts/Okta-Neue-Black.ttf
+          weight: 900
+
+        - asset: assets/fonts/Okta-Neue-Bold.ttf
+          weight: 700
+
+        - asset: assets/fonts/Okta-Neue-Semi-Bold.ttf
+          weight: 600
+
+        - asset: assets/fonts/Okta-Neue-Medium.ttf
+          weight: 500
+
+    - family: Getai
+
+      fonts:
+
+        - asset: assets/fonts/Getai.otf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
