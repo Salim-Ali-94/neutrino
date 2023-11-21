@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:neutrino/screens/home.dart";
+import "package:neutrino/utility/screen_manager.dart";
 import "package:flutter/services.dart";
 
 
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
                        debugShowCheckedModeBanner: false,
                        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                        useMaterial3: true),
-                       routes: { "/": (context) => Home() });
+                       routes: { "/": (context) => ScreenManager() });
 
   }
 
