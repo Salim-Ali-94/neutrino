@@ -4,19 +4,25 @@ import "package:neutrino/utility/constants.dart";
 
 class BottomNavBar extends StatelessWidget {
 
+  final int tab;
   final void Function(int)? switchTab;
-  BottomNavBar({ super.key, required this.switchTab });
+  BottomNavBar({ super.key,
+                 required this.switchTab,
+                 required this.tab });
 
   @override
   Widget build(BuildContext context) {
 
-    return BottomNavigationBar(backgroundColor: Colors.transparent, elevation: 0,
-                               onTap: (index) => switchTab!(index),
-                               selectedItemColor: green,
-                               unselectedItemColor: Colors.white,
-                               items: const [BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: ""),
-                                             BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ""),
-                                             BottomNavigationBarItem(icon: Icon(Icons.settings), label: "")]);
+    return Theme(data: ThemeData(splashColor: Colors.transparent, highlightColor: Colors.transparent),
+                 child: BottomNavigationBar(backgroundColor: Colors.transparent, elevation: 0,
+                                            onTap: (index) => switchTab!(index),
+                                            currentIndex: tab,
+                                            selectedItemColor: purple,
+                                            // selectedItemColor: granite,
+                                            unselectedItemColor: Colors.white,
+                                            items: [BottomNavigationBarItem(icon: (tab == 0) ? ColorFiltered(colorFilter: ColorFilter.mode(purple, BlendMode.srcATop), child: Image.asset("assets/icons/apartment.png", width: 28)) :  Image.asset("assets/icons/apartment.png", width: 28), label: ""),
+                                                    BottomNavigationBarItem(icon: (tab == 1) ? ColorFiltered(colorFilter: ColorFilter.mode(purple, BlendMode.srcATop), child: Image.asset("assets/icons/stack.png", width: 28)) : Image.asset("assets/icons/stack.png", width: 28), label: ""),
+                                                    BottomNavigationBarItem(icon: (tab == 2) ? ColorFiltered(colorFilter: ColorFilter.mode(purple, BlendMode.srcATop), child: Image.asset("assets/icons/stats.png", width: 28)) : Image.asset("assets/icons/stats.png", width: 28), label: "")]));
 
   }
 

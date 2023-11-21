@@ -12,12 +12,13 @@ class Home extends StatelessWidget {
 
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent, foregroundColor: Colors.white), backgroundColor: granite,
-
+    return Scaffold(
+                    // appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent, foregroundColor: Colors.white), backgroundColor: granite,
+                    backgroundColor: granite,
                     body: SingleChildScrollView(physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
 
                                                 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                                              children: [Row(mainAxisAlignment: MainAxisAlignment.center, children: [Container(width: screenWidth*0.9, child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
+                                                              children: [Row(mainAxisAlignment: MainAxisAlignment.center, children: [Container(margin: const EdgeInsets.only(top: 50), width: screenWidth*0.9, child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
                                                                                                                                                                                      children: [Text("Welcome,", style: TextStyle(color: Colors.white, fontFamily: "Futura",
                                                                                                                                                                                                                                   fontWeight: FontWeight.w500, fontSize: 16)),
 
@@ -34,7 +35,7 @@ class Home extends StatelessWidget {
                                                                                                                                                                                    
                                                                         SizedBox(height: 5),
                                                                         
-                                                                        InfoCard()])));
+                                                                        InfoCard(), InfoCard(), InfoCard(), InfoCard(), InfoCard(), InfoCard(), InfoCard()])));
 
   }
 

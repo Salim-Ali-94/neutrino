@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:neutrino/utility/constants.dart";
 import "package:neutrino/widgets/nav_bar.dart";
 import "package:neutrino/screens/home.dart";
+import "package:neutrino/utility/glass_box.dart";
 
 
 class ScreenManager extends StatefulWidget {
@@ -15,14 +16,16 @@ class ScreenManager extends StatefulWidget {
 
 class _ScreenManagerState extends State<ScreenManager> {
 
-  int current_screen = 0;
-  List<Widget> screens = [const Home(),];
+  int screen = 0;
+  List<Widget> screens = [const Home(),
+                          const Home(),
+                          const Home()];
 
-  void screenTransition(int screen) {
+  void screenTransition(int index) {
 
     setState(() {
 
-      current_screen = screen;
+      screen = index;
 
     });
 
@@ -32,8 +35,8 @@ class _ScreenManagerState extends State<ScreenManager> {
   Widget build(BuildContext context) {
 
     return Scaffold(backgroundColor: granite, extendBody: true,
-                    bottomNavigationBar: BottomNavBar(switchTab: (screen) => screenTransition(screen)),
-                    body: SafeArea(child: screens[current_screen]));
+                    bottomNavigationBar: GlassBox(backdrop: BottomNavBar(tab: screen, switchTab: (screen) => screenTransition(screen))),
+                    body: SafeArea(child: screens[screen], bottom: false));
 
   }
 
