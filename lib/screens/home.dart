@@ -12,21 +12,20 @@ class Home extends StatelessWidget {
 
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-                    // appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent, foregroundColor: Colors.white), backgroundColor: granite,
-                    backgroundColor: granite,
+    return Scaffold(backgroundColor: granite,
                     body: SingleChildScrollView(physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
 
                                                 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                                              children: [Row(mainAxisAlignment: MainAxisAlignment.center, children: [Container(margin: const EdgeInsets.only(top: 50), width: screenWidth*0.9, child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
-                                                                                                                                                                                     children: [Text("Welcome,", style: TextStyle(color: Colors.white, fontFamily: "Futura",
-                                                                                                                                                                                                                                  fontWeight: FontWeight.w500, fontSize: 16)),
+                                                              children: [Row(mainAxisAlignment: MainAxisAlignment.center, children: [Container(margin: const EdgeInsets.only(top: 50), width: screenWidth*0.9,
+                                                                                                                                               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                                                             children: [Text("Welcome,", style: TextStyle(color: Colors.white, fontFamily: "Futura",
+                                                                                                                                                                                                          fontWeight: FontWeight.w500, fontSize: 16)),
 
-                                                                                                                                                                                                Row(crossAxisAlignment: CrossAxisAlignment.start, children: [Text("Salim".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700,
-                                                                                                                                                                                                                                                                                                          fontFamily: "Getai", fontSize: 32)),
-                                                                                                                                                              
-                                                                                                                                                                                                                                                             Image.asset("assets/icons/flame.png", width: 36)])]))]),
-                                                                                                                                                                                                                                                             
+                                                                                                                                                                        Row(crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                                                                                            children: [Text("Salim".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700,
+                                                                                                                                                                                                                                    fontFamily: "Getai", fontSize: 32)),
+                                                                                                                                    
+                                                                                                                                                                                       Image.asset("assets/icons/flame.png", width: 36)])]))]),
                                                                                                                                                                                                                                                              
                                                                         SizedBox(height: 10),
 
