@@ -24,7 +24,8 @@ class InfoCard extends StatelessWidget {
                                               
                                               Row(crossAxisAlignment: CrossAxisAlignment.baseline, textBaseline: TextBaseline.alphabetic,
                                                   children: [Text("23.7", style: TextStyle(color: granite, fontWeight: FontWeight.w600,
-                                                                          fontFamily: "Futura", fontSize: 52)),
+                                                                          // fontFamily: "Futura", fontSize: 52)),
+                                                                          fontFamily: "Futura", fontSize: 42)),
 
                                                              SizedBox(width: 5),
 
