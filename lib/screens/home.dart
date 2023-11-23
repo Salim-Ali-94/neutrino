@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:neutrino/utility/constants.dart";
 import "package:neutrino/widgets/info_card.dart";
+import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 
 
 class Home extends StatelessWidget {
@@ -28,6 +29,15 @@ class Home extends StatelessWidget {
                                                                                                                                                                                        Image.asset("assets/icons/flame.png", width: 36)])]))]),
                                                                                                                                                                                                                                                              
                                                                         SizedBox(height: 10),
+
+                                                                        Row(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(width: 240, height: 240, 
+                                                                                                                                            //  child: LiquidCircularProgressIndicator(value: 0.42, borderWidth: 0, direction: Axis.vertical,
+                                                                                                                                             child: LiquidCircularProgressIndicator(value: 0.62, borderWidth: 0, direction: Axis.horizontal,
+                                                                                                                                                                                    valueColor: AlwaysStoppedAnimation(blue),
+                                                                                                                                                                                    backgroundColor: Colors.transparent,
+                                                                                                                                                                                    borderColor: Colors.transparent))]),
+
+                                                                        SizedBox(height: 20),
 
                                                                         Container(padding: EdgeInsets.only(left: screenWidth*0.05), child: Text("Health Metrics", style: TextStyle(fontFamily: "Futura", fontSize: 18,
                                                                                                                                                                                    color: Colors.white, fontWeight: FontWeight.w500))),
