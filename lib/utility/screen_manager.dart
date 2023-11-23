@@ -17,9 +17,12 @@ class ScreenManager extends StatefulWidget {
 class _ScreenManagerState extends State<ScreenManager> {
 
   int screen = 0;
-  List<Widget> screens = [const Home(),
-                          const Home(),
-                          const Home()];
+  // List<Widget> screens = [const Home(),
+  //                         const Home(),
+  //                         const Home()];
+  List<Widget> screens = [Home(),
+                          Home(),
+                          Home()];
 
   void screenTransition(int index) {
 
