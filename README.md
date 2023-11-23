@@ -6,4 +6,5 @@ full-stack fitness platform
 - glass blur effect
 - animated liquid progress indicator
 - screen navigation
+- grid section
 - responsive design principals

@@ -6,7 +6,13 @@ import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 
 class Home extends StatelessWidget {
 
-  const Home({ super.key });
+  Home({ super.key });
+
+  final percent = 0.64;
+  final health_metrics = [InfoCard(category: "sleep", value: 6.2),
+                          InfoCard(category: "bmi", value: 23.7),
+                          InfoCard(category: "water", value: 4.3),
+                          InfoCard(category: "heart rate", value: 123)];
 
   @override
   Widget build(BuildContext context) {
@@ -27,24 +33,27 @@ class Home extends StatelessWidget {
                                                                                                                                                                                                                                     fontFamily: "Getai", fontSize: 32)),
                                                                                                                                     
                                                                                                                                                                                        Image.asset("assets/icons/flame.png", width: 36)])]))]),
-                                                                                                                                                                                                                                                             
-                                                                        SizedBox(height: 10),
 
-                                                                        Row(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(width: 240, height: 240, 
-                                                                                                                                            //  child: LiquidCircularProgressIndicator(value: 0.62, borderWidth: 0, direction: Axis.vertical,
-                                                                                                                                             child: LiquidCircularProgressIndicator(value: 0.42, borderWidth: 0, direction: Axis.horizontal,
-                                                                                                                                                                                    valueColor: AlwaysStoppedAnimation(blue),
+                                                                        SizedBox(height: 5),
+
+                                                                        Row(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(width: 280, height: 280,
+                                                                                                                                             child: LiquidCircularProgressIndicator(value: percent, borderWidth: 0, direction: Axis.horizontal,
+                                                                                                                                                                                    valueColor: AlwaysStoppedAnimation(nature),
                                                                                                                                                                                     backgroundColor: Colors.transparent,
                                                                                                                                                                                     borderColor: Colors.transparent))]),
 
-                                                                        SizedBox(height: 20),
+                                                                        SizedBox(height: 30),
 
                                                                         Container(padding: EdgeInsets.only(left: screenWidth*0.05), child: Text("Health Metrics", style: TextStyle(fontFamily: "Futura", fontSize: 18,
                                                                                                                                                                                    color: Colors.white, fontWeight: FontWeight.w500))),
                                                                                                                                                                                    
                                                                         SizedBox(height: 5),
-                                                                        
-                                                                        InfoCard()])));
+
+                                                                        GridView.builder(itemCount: health_metrics.length, shrinkWrap: true, physics: NeverScrollableScrollPhysics(), padding: EdgeInsets.only(left: screenWidth*0.05, right: screenWidth*0.05), primary: false,
+                                                                                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(childAspectRatio: screenWidth*0.48 / 160, crossAxisSpacing: 6, mainAxisSpacing: 6, crossAxisCount: 2),
+                                                                                         itemBuilder: (_, index) => health_metrics[index]),
+
+                                                                        SizedBox(height: screenWidth)])));
 
   }
 
