@@ -26,7 +26,11 @@ class InfoCard extends StatelessWidget {
                                                                                                              // fontFamily: "Futura", fontSize: 52)),
                                                                                                              // fontFamily: "Futura", fontSize: 42)),
                                                                                                              // fontFamily: "Futura", fontSize: 50)),
-                                                                                                             fontFamily: "Futura", fontSize: 48)),
+
+                                                                                                            //  fontFamily: "Futura", fontSize: 48)),
+                                                                                                            //  fontFamily: "Futura", fontSize: screenWidth*0.117)),
+
+                                                                                                             fontFamily: "Futura", fontSize: screenWidth*0.109)),
 
                                                                               SizedBox(width: 5),
 
