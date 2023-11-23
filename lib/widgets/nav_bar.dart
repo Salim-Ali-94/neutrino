@@ -17,10 +17,7 @@ class BottomNavBar extends StatelessWidget {
                  child: BottomNavigationBar(backgroundColor: Colors.transparent, elevation: 0,
                                             onTap: (index) => switchTab!(index),
                                             currentIndex: tab,
-                                            // selectedItemColor: purple,
-                                            // selectedItemColor: granite,
-                                            // unselectedItemColor: Colors.white,
-                                            items: [BottomNavigationBarItem(icon: (tab == 0) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/home.png", width: 24)) :  Image.asset("assets/icons/home.png", width: 24), label: ""),
+                                            items: [BottomNavigationBarItem(icon: (tab == 0) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/house.png", width: 24)) :  Image.asset("assets/icons/house.png", width: 24), label: ""),
                                                     BottomNavigationBarItem(icon: (tab == 1) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/stack.png", width: 24)) : Image.asset("assets/icons/stack.png", width: 24), label: ""),
                                                     BottomNavigationBarItem(icon: (tab == 2) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/stats.png", width: 30)) : Image.asset("assets/icons/stats.png", width: 30), label: "")]));
 

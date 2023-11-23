@@ -51,17 +51,7 @@ const Map<String, String> icons = { "bmi": "assets/icons/scale.png",
                                     "water": "assets/icons/water.png",
                                     "heart rate": "assets/icons/heart-beat.png" };
 
-// const Map<String, Color> colours = { "bmi": pink,
-//                                      "sleep": purple,
-//                                      "water": violet,
-//                                      "heart rate": ocean };
-
 const Map<String, Color> colours = { "bmi": blue,
                                      "sleep": orange,
                                      "water": purple,
                                      "heart rate": green };
-
-// const Map<String, Map<double, String>> measure = { "bmi": {  },
-//                                                    "sleep": orange,
-//                                                    "water": purple,
-//                                                    "heart rate": green };
