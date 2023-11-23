@@ -23,10 +23,9 @@ class Analytics extends StatelessWidget {
                                                                                           FlSpot(11, 4), FlSpot(13, 1.8)],
 
                                                                                   dotData: const FlDotData(show: false),
-                                                                                  isCurved: true,
-                                                                                  barWidth: 2,
-                                                                                  color: green,
-                                                                                  belowBarData: BarAreaData(show: true, gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, stops: [0, 0.8], colors: [fade, granite])))])))])));
+                                                                                  isCurved: true, barWidth: 2, color: green,
+                                                                                  belowBarData: BarAreaData(show: true, gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter,
+                                                                                                                                                 stops: [0, 0.8], colors: [fade, granite])))])))])));
 
   }
 
