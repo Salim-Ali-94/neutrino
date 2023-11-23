@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:neutrino/utility/constants.dart";
 import "package:neutrino/widgets/nav_bar.dart";
 import "package:neutrino/screens/home.dart";
+import "package:neutrino/screens/analytics.dart";
 import "package:neutrino/utility/glass_box.dart";
 
 
@@ -20,7 +21,7 @@ class _ScreenManagerState extends State<ScreenManager> {
 
   List<Widget> screens = [Home(),
                           Home(),
-                          Home()];
+                          Analytics()];
 
   void screenTransition(int index) {
 
