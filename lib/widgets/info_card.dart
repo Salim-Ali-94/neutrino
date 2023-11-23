@@ -12,7 +12,7 @@ class InfoCard extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(height: 160, width: screenWidth*0.48, padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                     decoration: BoxDecoration(color: green, borderRadius: BorderRadius.all(Radius.circular(10))),
+                     decoration: BoxDecoration(color: sky, borderRadius: BorderRadius.all(Radius.circular(10))),
 
                      child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                    children: [Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start,
