@@ -31,8 +31,8 @@ class Home extends StatelessWidget {
                                                                         SizedBox(height: 10),
 
                                                                         Row(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(width: 240, height: 240, 
-                                                                                                                                            //  child: LiquidCircularProgressIndicator(value: 0.42, borderWidth: 0, direction: Axis.vertical,
-                                                                                                                                             child: LiquidCircularProgressIndicator(value: 0.62, borderWidth: 0, direction: Axis.horizontal,
+                                                                                                                                            //  child: LiquidCircularProgressIndicator(value: 0.62, borderWidth: 0, direction: Axis.vertical,
+                                                                                                                                             child: LiquidCircularProgressIndicator(value: 0.42, borderWidth: 0, direction: Axis.horizontal,
                                                                                                                                                                                     valueColor: AlwaysStoppedAnimation(blue),
                                                                                                                                                                                     backgroundColor: Colors.transparent,
                                                                                                                                                                                     borderColor: Colors.transparent))]),
