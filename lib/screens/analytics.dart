@@ -13,7 +13,8 @@ class Analytics extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(backgroundColor: granite,
-                    body: Row(mainAxisAlignment: MainAxisAlignment.start, children: [Container(width: screenWidth, height: 200, child: LineChart(LineChartData(minX: 0, minY: 0, maxX: 11, maxY: 6,
+                    body: SingleChildScrollView(physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                                                child: Column(children: [Container(width: screenWidth, height: 200, child: LineChart(LineChartData(minX: 0, minY: 0, maxX: 11, maxY: 6,
                                                   gridData: FlGridData(show: false),
                                                   borderData: FlBorderData(show: false),
                                                   lineBarsData: [LineChartBarData(spots: [FlSpot(-2, 4.6), FlSpot(0, 3), FlSpot(2.6, 2),
@@ -25,7 +26,7 @@ class Analytics extends StatelessWidget {
                                                                                   isCurved: true,
                                                                                   barWidth: 2,
                                                                                   color: green,
-                                                                                  belowBarData: BarAreaData(show: true, gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, stops: [0, 1], colors: [fade, granite])))])))]));
+                                                                                  belowBarData: BarAreaData(show: true, gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, stops: [0, 0.8], colors: [fade, granite])))])))])));
 
   }
 
