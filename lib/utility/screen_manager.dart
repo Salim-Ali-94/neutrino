@@ -3,6 +3,7 @@ import "package:neutrino/utility/constants.dart";
 import "package:neutrino/widgets/nav_bar.dart";
 import "package:neutrino/screens/home.dart";
 import "package:neutrino/screens/analytics.dart";
+import "package:neutrino/screens/advisor.dart";
 import "package:neutrino/utility/glass_box.dart";
 
 
@@ -20,8 +21,8 @@ class _ScreenManagerState extends State<ScreenManager> {
   int screen = 0;
 
   List<Widget> screens = [Home(),
-                          Home(),
-                          Analytics()];
+                          const Advisor(),
+                          const Analytics()];
 
   void screenTransition(int index) {
 
