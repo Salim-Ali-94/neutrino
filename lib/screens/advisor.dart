@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:neutrino/utility/constants.dart";
+import "package:neutrino/widgets/option_card.dart";
 
 
 class Advisor extends StatelessWidget {
@@ -9,7 +10,11 @@ class Advisor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(backgroundColor: granite);
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return Scaffold(backgroundColor: granite,
+                    body: SingleChildScrollView(physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                                                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Container(margin: EdgeInsets.only(top: 30, left: screenWidth*0.05), child: Text("Guides", style: TextStyle(color: Colors.white, fontFamily: "Futura", fontSize: 24, fontWeight: FontWeight.w900))), OptionCard()])));
 
   }
 
