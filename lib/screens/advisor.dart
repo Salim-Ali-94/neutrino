@@ -14,7 +14,7 @@ class Advisor extends StatelessWidget {
 
     return Scaffold(backgroundColor: granite,
                     body: SingleChildScrollView(physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-                                                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Container(margin: EdgeInsets.only(top: 30, left: screenWidth*0.05), child: Text("Guides", style: TextStyle(color: Colors.white, fontFamily: "Futura", fontSize: 24, fontWeight: FontWeight.w900))), OptionCard()])));
+                                                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Container(margin: EdgeInsets.only(top: 30, left: screenWidth*0.05), child: Text("Guides", style: TextStyle(color: Colors.white, fontFamily: "Futura", fontSize: 24, fontWeight: FontWeight.w700))), OptionCard()])));
 
   }
 
