@@ -22,7 +22,8 @@ class _ScreenManagerState extends State<ScreenManager> {
 
   List<Widget> screens = [Home(),
                           const Advisor(),
-                          const Analytics()];
+                          const Analytics(),
+                          const Advisor()];
 
   void screenTransition(int index) {
 
