@@ -19,8 +19,7 @@ class GlassBox extends StatelessWidget {
                                       // color: Color(0x99302d43),
                                       // color: Color(0x55302d43),
                                       child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                                                            child: Container(alignment: Alignment.bottomCenter,
-                                                                             child: backdrop))));
+                                                            child: Container(alignment: Alignment.bottomCenter, child: backdrop))));
 
   }
 
