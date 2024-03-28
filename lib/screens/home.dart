@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:neutrino/utility/constants.dart";
 import "package:neutrino/widgets/info_card.dart";
-import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
+import "package:liquid_progress_indicator_v2/liquid_progress_indicator.dart";
 
 
 class Home extends StatelessWidget {
@@ -9,10 +9,14 @@ class Home extends StatelessWidget {
   Home({ super.key });
 
   final percent = 0.64;
-  final health_metrics = [InfoCard(category: "sleep", value: 6.2),
-                          InfoCard(category: "bmi", value: 23.7),
-                          InfoCard(category: "water", value: 4.3),
-                          InfoCard(category: "heart rate", value: 123)];
+  // final health_metrics = [InfoCard(category: "sleep", value: 6.2),
+  //                         InfoCard(category: "bmi", value: 23.7),
+  //                         InfoCard(category: "water", value: 4.3),
+  //                         InfoCard(category: "heart rate", value: 123)];
+  final List<Map<String, dynamic>> health_metrics = [{"category": "sleep", "value": 6.2},
+                                                     {"category": "bmi", "value": 23.7},
+                                                     {"category": "water", "value": 4.3},
+                                                     {"category": "heart rate", "value": 123.0}];
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,8 @@ class Home extends StatelessWidget {
 
                                                                         GridView.builder(itemCount: health_metrics.length, shrinkWrap: true, physics: NeverScrollableScrollPhysics(), padding: EdgeInsets.only(left: screenWidth*0.05, right: screenWidth*0.05), primary: false,
                                                                                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(childAspectRatio: screenWidth*0.48 / 160, crossAxisSpacing: 6, mainAxisSpacing: 6, crossAxisCount: 2),
-                                                                                         itemBuilder: (_, index) => health_metrics[index]),
+                                                                                        //  itemBuilder: (_, index) => health_metrics[index]),
+                                                                                         itemBuilder: (_, index) => InfoCard(category: health_metrics[index]["category"], value: health_metrics[index]["value"])),
 
                                                                         SizedBox(height: screenWidth)])));
 

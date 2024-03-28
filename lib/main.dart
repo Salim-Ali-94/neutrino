@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:neutrino/utility/screen_manager.dart";
+import "package:neutrino/screens/difficulty.dart";
 import "package:flutter/services.dart";
 
 
@@ -23,7 +24,8 @@ class App extends StatelessWidget {
                        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                                         canvasColor: Colors.transparent, useMaterial3: true),
 
-                       routes: { "/": (context) => ScreenManager() });
+                       routes: { "/": (context) => ScreenManager(),
+                                 "/difficulty": (context) => Difficulty() });
 
   }
 

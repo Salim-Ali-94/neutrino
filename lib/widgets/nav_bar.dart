@@ -21,7 +21,7 @@ class BottomNavBar extends StatelessWidget {
                                             currentIndex: tab,
                                             items: [BottomNavigationBarItem(icon: (tab == 0) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/house.png", width: 24)) : Image.asset("assets/icons/house.png", width: 24), label: ""),
                                                     BottomNavigationBarItem(icon: (tab == 1) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/stack.png", width: 24)) : Image.asset("assets/icons/stack.png", width: 24), label: ""),
-                                                    BottomNavigationBarItem(icon: (tab == 2) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/stats.png", width: 32)) : Image.asset("assets/icons/stats.png", width: 32), label: ""),
+                                                    BottomNavigationBarItem(icon: (tab == 2) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/signal.png", width: 32)) : Image.asset("assets/icons/signal.png", width: 32), label: ""),
                                                     BottomNavigationBarItem(icon: (tab == 3) ? ColorFiltered(colorFilter: ColorFilter.mode(nature, BlendMode.srcATop), child: Image.asset("assets/icons/details.png", width: 28)) : Image.asset("assets/icons/details.png", width: 28), label: "")]));
 
   }

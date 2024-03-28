@@ -52,9 +52,18 @@ const Map<String, String> units = { "bmi": "kg/m\u00B2",
 const Map<String, String> icons = { "bmi": "assets/icons/scale.png",
                                     "sleep": "assets/icons/sleep.png",
                                     "water": "assets/icons/water.png",
-                                    "heart rate": "assets/icons/heart-beat.png" };
+                                    "heart rate": "assets/icons/beat.png" };
 
 const Map<String, Color> colours = { "bmi": blue,
                                      "sleep": orange,
                                      "water": purple,
                                      "heart rate": green };
+
+const List<Map<String, dynamic>> categories = [{ "image": "assets/icons/meal.png",
+                                           "category": "Meal plans" },
+                                         
+                                         { "image": "assets/icons/dumbbell.png",
+                                           "category": "Body building" },
+                                           
+                                         { "image": "assets/icons/lotus.png",
+                                           "category": "Yoga" }];
